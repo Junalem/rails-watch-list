@@ -5,18 +5,14 @@
       <div class="add_list">
         <a class="btn btn-primary" href="http://127.0.0.1:3000/lists/new">Add new list</a>
       </div>
-      <%# <p class="btn btn-primary"><%= link_to "Add new list", new_list_path %>
-      <%# </p> %>
-      <%# <p><%= link_to list_path(params[:id]) %></p>
+    </div>
   </div>
-</div>
 </div>
 <div class="containet m-3">
   <div class="cards">
     <%  @lists.each do |list| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://the-irishman.com/wp-content/uploads/2018/01/Webp.net-compress-image.jpg' %>)">
-        <%= link_to list.name, list_path(list) %>
-        <%=   %>
+        <%= link_to list.name, list_path(list)%>
       </div>
     <% end %>
   </div>

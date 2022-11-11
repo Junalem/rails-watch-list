@@ -1,4 +1,5 @@
 require 'open-uri'
+Bookmark.destroy_all
 Movie.destroy_all
 # List.destroy_all
 
@@ -10,7 +11,7 @@ response['results'].each do |movie_hash|
   puts
   p movie_hash
   # create an instance with the hash
-  Movie.create!(title: movie_hash["original_title"], overview: movie_hash["overview"], poster_url: movie_hash["poster_path"], rating: movie_hash["vote_average"]
+  Movie.create!(title: movie_hash["original_title"], overview: movie_hash["overview"], poster_url: "https://image.tmdb.org/t/p/w500" + movie_hash['poster_path'], rating: movie_hash["vote_average"]
   )
 end
 
