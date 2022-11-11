@@ -1,5 +1,5 @@
 <div class="containet mt-3">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/736x/d0/c9/17/d0c917f004159e073c87e20ffe6d4ea9.jpg);">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>);">
     <div class="container">
       <h1><strong>Lists of the movies</strong>!</h1>
       <div class="add_list">
