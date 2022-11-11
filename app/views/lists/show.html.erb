@@ -1,4 +1,4 @@
-<div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/id/1332736120/photo/white-and-grey-textured-stone-podium-with-sea-pebbles-green-leaves-and-plant-shadow-pattern.jpg?b=1&s=170667a&w=0&k=20&c=aVUc1XEvtedAOhHiiVwKj-gmeQOAg_BkSMf7_hI10SU=)">
+<div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
   <%= @list.name %>
 </div>
 <div class="card-trip-infos">
