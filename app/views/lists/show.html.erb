@@ -1,5 +1,9 @@
-<div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.photo %>)">
+<div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : 'https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403'%>)">
   <%= @list.name %>
+  <%= link_to lists_path, class: 'card-back-link' do %>
+    <i class="fa-regular fa-circle-left"></i>
+  <% end %>
+</div>
 </div>
 <div class="container form-container mt-3">
   <%= render 'bookmarks/form', list: @list, bookmark: @bookmark %>
@@ -8,8 +12,11 @@
   <%  @list.bookmarks.each do |bookmark| %>
     <div class="cards m-3">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
-        <p> <%= bookmark.movie.rating %></p>
-        <h2><%= bookmark.comment %> </h2>
+        <h3 class="rating"> <i class="fa-regular fa-star"></i> <%= bookmark.movie.rating %></h3>
+        <div class="card-description">
+          <h2><%= bookmark.movie.title %> </h2>
+          <p><%= bookmark.comment %> </p>
+        </div>
         <%= link_to bookmark_path(bookmark), data: { turbo_method: 'delete', turbo_confirm: "Delete Bookmark?" }, class: 'card-remove-link' do %>
           <i class="fa-regular fa-circle-xmark"></i>
         </div>

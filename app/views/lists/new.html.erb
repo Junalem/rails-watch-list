@@ -1,7 +1,3 @@
 <div class="container form-container">
-  <%= simple_form_for @list do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit %>
-  <% end %>
+  <%= render 'lists/form', list: @list%>
 </div>

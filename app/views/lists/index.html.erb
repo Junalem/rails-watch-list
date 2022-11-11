@@ -1,19 +1,20 @@
+  
 <div class="containet mt-3">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/736x/d0/c9/17/d0c917f004159e073c87e20ffe6d4ea9.jpg);">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2019/02/dog-451643.jpg?h=bf654dbc&itok=MQGvBmuo);">
     <div class="container">
-      <h1><strong>Lists of the movies</strong>!</h1>
-      <div class="add_list">
-        <a class="btn btn-primary" href="http://127.0.0.1:3000/lists/new">Add new list</a>
-      </div>
+      <h1 class="header"><strong>Lists of the movies</strong>!</h1>
     </div>
   </div>
 </div>
 <div class="containet m-3">
   <div class="cards">
     <%  @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://the-irishman.com/wp-content/uploads/2018/01/Webp.net-compress-image.jpg' %>)">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403' %>)">
         <%= link_to list.name, list_path(list)%>
       </div>
     <% end %>
+  </div>
+  <div class="container mt-3 form-container">
+    <%= render 'lists/form', list: @list%>
   </div>
 </div>
