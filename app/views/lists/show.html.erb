@@ -1,0 +1,17 @@
+<div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/id/1332736120/photo/white-and-grey-textured-stone-podium-with-sea-pebbles-green-leaves-and-plant-shadow-pattern.jpg?b=1&s=170667a&w=0&k=20&c=aVUc1XEvtedAOhHiiVwKj-gmeQOAg_BkSMf7_hI10SU=)">
+  <%= @list.name %>
+</div>
+<div class="card-trip-infos">
+  <div class="cards m-3">
+    <%  @list.bookmarks.each do |bookmark| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
+        <p> <%= bookmark.movie.rating %></p>
+        <h2><%= bookmark.comment %> </h2>
+        <%= link_to bookmark_path(bookmark), data: { turbo_method: 'delete', turbo_confirm: "Delete Bookmark?" }, class: 'card-remove-link' do %>
+          <i class="fa-regular fa-circle-xmark"></i>
+        <% end %>
+      </div>
+      <%# <p class="btn btn-primary"><%= link_to "Destroy", bookmark_path(bookmark), data: { turbo_method: 'delete', turbo_confirm: 'Delete List?' } %>
+    <% end %>
+  </div>
+</div>

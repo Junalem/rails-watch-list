@@ -1,0 +1,22 @@
+<div class="containet mt-3">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/736x/d0/c9/17/d0c917f004159e073c87e20ffe6d4ea9.jpg);">
+    <div class="container">
+      <h1><strong>Lists of the movies</strong>!</h1>
+      <div class="add_list">
+        <a class="btn btn-primary" href="http://127.0.0.1:3000/lists/new">Add new list</a>
+      </div>
+      <%# <p class="btn btn-primary"><%= link_to "Add new list", new_list_path %>
+      <%# </p> %>
+      <%# <p><%= link_to list_path(params[:id]) %></p>
+  </div>
+</div>
+</div>
+<div class="containet m-3">
+  <div class="cards">
+    <%  @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random/300x200)">
+        <%= list.name %>
+      </div>
+    <% end %>
+  </div>
+</div>
