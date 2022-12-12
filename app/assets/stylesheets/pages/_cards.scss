@@ -1,0 +1,205 @@
+.home {
+  text-decoration: none;
+  font-family: 'Pacifico', cursive;
+  color: black;
+  &hover{
+    color: rgb(255, 255, 255);
+  }
+}
+
+.coming-back {
+  background-color: rgba(#036EB7, 0.5) !important;
+}
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 197px;
+  // width: 31%;
+  display: flex;
+  justify-content: center;
+  align-items: bottom;
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: 'Pacifico', cursive;
+  position: relative;
+  margin-top: 8px;
+}
+
+.card-category-new {
+  background-size: cover;
+  background-position: center;
+  height: 197px;
+  // width: 31%;
+  display: flex;
+  justify-content: center;
+  align-items: bottom;
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: 'Pacifico', cursive;
+  position: relative;
+  margin-top: 8px;
+  padding: 8px;
+}
+
+.one-comment {
+  width: 31%;
+}
+
+.one-list {
+  height: 240px;
+  width: 31%;
+  align-items: bottom;
+  padding: 0;
+  text-align: center;
+  a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+  border-radius: 5px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: 'Pacifico', cursive;
+}
+
+.one-list-new {
+  height: 240px;
+  width: 31%;
+  align-items: bottom;
+  padding: 0;
+  text-align: center;
+  a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+  border-radius: 5px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: 'Pacifico', cursive;
+}
+
+.card-category-show {
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: 'Pacifico', cursive;
+  position: relative;
+
+}
+
+.card-category:hover {
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.link-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+}
+.card .card-category {
+  position: relative;
+}
+
+
+.card-remove-link {
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  opacity: 0.8;
+  font-weight: lighter;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+.cards {
+  position: relative;
+}

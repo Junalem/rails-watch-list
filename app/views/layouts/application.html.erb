@@ -14,6 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   </head>
   <body>
-    <%= yield %>
-  </body>
+    <nav class="navbar navbar-light bg-light coming-back">
+      <%= link_to "Home", lists_path, class: "ms-5 home"%>
+      <a href="https://www.imdb.com/chart/top/" class="me-5 home">IMDb Top 250 Movies</a>
+    </div>
+  </nav>
+  <%= yield %>
+</body>
 </html>
