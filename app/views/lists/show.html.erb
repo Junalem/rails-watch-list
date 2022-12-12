@@ -7,7 +7,7 @@
   <div class="container card-trip-info">
     <div class="row">
       <%  @list.bookmarks.each do |bookmark| %>
-        <div class="ms-3 mt-3 col-4 one-list-new pb-5">
+        <div class="ms-3 my-3 col-4 one-list-new pb-5">
           <div class="card-category-new" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
             <h6 class="rating"> <i class="fa-regular fa-star"></i> <%= bookmark.movie.rating %></h6>
             <div class="card-description">
