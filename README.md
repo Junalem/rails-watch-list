@@ -1,24 +1,54 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 🍿 Task Manager
 
-Things you may want to cover:
+A small web application to keep track of movies you have watched or would like to watch. You can also organize movie lists by genre!
 
-* Ruby version
+<div class="d-flex">
 
-* System dependencies
+<img width="410" alt="image" src="https://user-images.githubusercontent.com/114731843/207112797-372067ea-f092-4a56-bd7d-004f239f8335.png">
+<img width="410" height="205" alt="image" src="https://user-images.githubusercontent.com/114731843/207113844-7860975d-d26b-4162-be12-0eb47fc78685.png">
+</div> 
 
-* Configuration
+## Getting Started
+### Setup
 
-* Database creation
+Install gems
+```
+bundle install
+```
+Install JS packages
+```
+yarn install
+```
 
-* Database initialization
+### ENV Variables
+Create `.env` file
+```
+touch .env
+```
+Inside `.env`, set these variables. For any APIs, see group Slack channel.
+```
+CLOUDINARY_URL=your_own_cloudinary_url_key
+```
 
-* How to run the test suite
+### DB Setup
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Run a server
+```
+rails s
+```
 
-* Deployment instructions
+## Built With
+- [Rails 7](https://guides.rubyonrails.org/) - Backend / Front-end
+- [Heroku](https://heroku.com/) - Deployment
+- [PostgreSQL](https://www.postgresql.org/) - Database
+- [Bootstrap](https://getbootstrap.com/) — Styling
+- [Figma](https://www.figma.com) — Prototyping
 
-* ...
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
